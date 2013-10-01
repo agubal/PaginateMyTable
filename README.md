@@ -15,4 +15,4 @@ $(".MyTable").paginate({<br/>
             showIfLess: false  // Don't show pager if table has only one page. Default: true<br/>
         });<br/><br/>
         
-<a href="http://gubal.net/">Live DEMOS are here</a>
+<a href="http://gubal.net/">Live DEMOS and code examples</a>
