@@ -1,0 +1,33 @@
+{
+  "name": "PaginateMyTable",
+  "title": "PaginateMyTable",
+  "description": "jQuery plugin for HTML table pagination.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "pagelist",
+    "paged",
+    "paginate",
+    "table"
+  ],
+  "version": "1.0",
+  "author": {
+    "name": "Andrey Gubal",
+    "url": "http://gubal.net"
+  },
+  "maintainers": [
+		{
+			"name": "Andrey Gubal",
+			"email": "andrey@gubal.net",
+			"url": "http://gubal.net"
+		}
+	],
+  "dependencies": {
+    "jquery": ">=1.5",
+    "easing": ">=1.3"
+  },
+  "bugs": "https://github.com/agubal/PaginateMyTable/issues",
+  "homepage": "http://gubal.net",
+  "docs": "http://gubal.net",
+  "demo": "hhttp://gubal.net"
+}
