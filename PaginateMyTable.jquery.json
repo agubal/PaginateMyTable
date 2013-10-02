@@ -10,7 +10,7 @@
     "paginate",
     "table"
   ],
-  "version": "1.0",
+  "version": "1.0.1",
   "author": {
     "name": "Andrey Gubal",
     "url": "http://gubal.net"
@@ -22,6 +22,12 @@
 			"url": "http://gubal.net"
 		}
 	],
+	"licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "dependencies": {
     "jquery": ">=1.5",
     "easing": ">=1.3"
