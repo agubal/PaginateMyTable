@@ -10,7 +10,7 @@
     "paginate",
     "table"
   ],
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "Andrey Gubal",
     "url": "http://gubal.net"
@@ -35,5 +35,5 @@
   "bugs": "https://github.com/agubal/PaginateMyTable/issues",
   "homepage": "http://gubal.net",
   "docs": "http://gubal.net",
-  "demo": "hhttp://gubal.net"
+  "demo": "http://gubal.net"
 }
