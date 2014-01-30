@@ -8,7 +8,13 @@
             rows: 5,
             position: "bottom",
             jqueryui: false,
-            showIfLess: true
+            showIfLess: true,
+			container: '<div class="pager"></div>',
+			tag: 'span',
+			attributes : '',
+			activeclass : 'active',
+			defaultclass  : 'number',
+			callback : function() { }
         }, options);
 
         $(this).each(function () {
@@ -21,14 +27,14 @@
             table.trigger('pageTable');
             var numRows = table.find('tbody tr').length;
             var numPages = Math.ceil(numRows / rowPerPage);
-            var pager = $('<div class="pager"></div>');
+            var pager = $(settings.container);
 
             //Check ui theming====================================================================
-            var activeclass = settings.jqueryui ? "ui-state-active" : "active";
-            var defaultclass = settings.jqueryui ? "ui-state-default" : "number";
+            var activeclass = settings.jqueryui ? "ui-state-active" : settings.activeclass;
+            var defaultclass = settings.jqueryui ? "ui-state-default" : settings.defaultclass;
 
             for (var page = 0; page < numPages; page++) {
-                $('<span class="' + defaultclass + '"></span>').text(page + 1).bind('click', {
+                $('<'+settings.tag+' class="' + defaultclass + '" '+settings.attributes+'></'+settings.tag+'>').text(page + 1).bind('click', {
                     newPage: page
                 }, function (event) {
                     currentPage = event.data['newPage'];
@@ -42,29 +48,26 @@
             if (settings.showIfLess) {
 
                 if (settings.position == "bottom") {
-                    pager.insertAfter(table).find('span.' + defaultclass + ':first').addClass(activeclass);
+                    pager.insertAfter(table).find(settings.tag+'.' + defaultclass + ':first').addClass(activeclass);
                 }
                 else if (settings.position == "top") {
-                    pager.insertBefore(table).find('span.' + defaultclass + ':first').addClass(activeclass);
+                    pager.insertBefore(table).find(settings.tag+'.' + defaultclass + ':first').addClass(activeclass);
                 }
             }
             else if (rowPerPage < numRows) {
                 if (settings.position == "bottom") {
-                    pager.insertAfter(table).find('span.' + defaultclass + ':first').addClass(activeclass);
+                    pager.insertAfter(table).find(settings.tag+'.' + defaultclass + ':first').addClass(activeclass);
                 }
                 else if (settings.position == "top") {
-                    pager.insertBefore(table).find('span.' + defaultclass + ':first').addClass(activeclass);
+                    pager.insertBefore(table).find(settings.tag+'.' + defaultclass + ':first').addClass(activeclass);
                 }
             }
 
 
         });
-
+		settings.callback();
         return this;
     }
 
 
 })(jQuery);
-
-
-
